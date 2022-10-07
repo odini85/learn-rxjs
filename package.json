@@ -1,0 +1,17 @@
+{
+  "name": "rxjs-learn",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "parcel src/index.html -p 3690"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  },
+  "dependencies": {
+    "rxjs": "^7.5.6"
+  }
+}
