@@ -154,6 +154,24 @@ subject.subscribe((x) => {
 console.log("next 4...5");
 subject.next(4);
 subject.next(5);
+
+/**
+
+behavior A 구독 시작
+behavior A: 0
+behavior next 1...3
+behavior A: 1
+behavior A: 2
+behavior A: 3
+behavior B 구독 시작
+behavior B: 3
+behavior next 4...5
+behavior A: 4
+behavior B: 4
+behavior A: 5
+behavior B: 5
+
+*/
 ```
 
 ### 마지막 발행 값 가져오기
@@ -169,5 +187,50 @@ console.log("마지막 구독값 출력", subject.getValue());
 이후에는 1개씩 발행
 
 ```ts
+import { ReplaySubject } from "rxjs";
 
+const subject = new ReplaySubject(3); // 마지막 3개 값 저장
+
+console.log("replay A 구독 시작");
+subject.subscribe((x) => {
+  console.log("replay A: " + x);
+});
+
+console.log("replay next 1...5");
+subject.next(1);
+subject.next(2);
+subject.next(3);
+subject.next(4);
+subject.next(5);
+
+console.log("replay B 구독 시작");
+subject.subscribe((x) => {
+  console.log("replay B: " + x);
+});
+
+console.log("replay next 6...7");
+subject.next(6);
+subject.next(7);
+
+/**
+ 
+  behavior 마지막 구독값 : 5
+  replay A 구독 시작
+  replay next 1...5
+  replay A: 1
+  replay A: 2
+  replay A: 3
+  replay A: 4
+  replay A: 5
+  replay B 구독 시작
+  replay B: 3
+  replay B: 4
+  replay B: 5
+  replay next 6...7
+  replay A: 6
+  replay B: 6
+  replay A: 7
+  replay B: 7
+
+*/
 ```
