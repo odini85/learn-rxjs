@@ -111,3 +111,5 @@ observable$
   )
   .subscribe(observer);
 ```
+
+> [RxJS Operators 공식 문서](https://rxjs-dev.firebaseapp.com/guide/operators)
