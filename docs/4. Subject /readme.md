@@ -161,3 +161,13 @@ subject.next(5);
 ```ts
 console.log("마지막 구독값 출력", subject.getValue());
 ```
+
+## ReplaySubject
+
+마지막 N개 값을 저장하고 있다가 추가 구독자 발생하면 저장되어 있던 N개를 발행 하고,
+
+이후에는 1개씩 발행
+
+```ts
+
+```

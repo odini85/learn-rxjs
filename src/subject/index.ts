@@ -9,3 +9,6 @@
 
 // behavior subject
 import "./behavior-subject";
+
+// replay subject
+import "./replay-subject";
