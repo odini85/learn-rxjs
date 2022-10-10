@@ -19,4 +19,8 @@
 // import "./element-at.ts";
 // import "./distinct.ts";
 // import "./filter.ts";
-import "./tap.ts";
+// import "./tap.ts";
+
+// transformation
+// import "./map.ts";
+import "./pluck.ts";

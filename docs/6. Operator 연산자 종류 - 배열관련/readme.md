@@ -1,12 +1,13 @@
-# Operator 연산자 종류
-
-## 배열 연산자
+# Operator 연산자 종류 - 배열 연산자
 
 - count, max, min, reduce, first, last, elementAt, distinct, filter, tap
 
+## 수학관련 연산자
+
+- count, max, min, reduce
+
 ### [count](https://rxjs-dev.firebaseapp.com/api/operators/count)
 
-수학 관련 연산자<br />
 소스의 방출 수를 계산하고 complete 되면 계산된 숫자를 발행한다.
 
 ```ts
@@ -31,7 +32,6 @@ observable$.pipe(count()).subscribe(observer);
 
 ### [max](https://rxjs-dev.firebaseapp.com/api/operators/max)
 
-수학 관련 연산자<br />
 숫자(또는 제공된 함수와 비교할 수 있는 항목)를 내보내는 observable에서 작동한다.
 
 complete되면 가장 큰 값을 발행한다.
@@ -58,7 +58,6 @@ observable$.pipe(max()).subscribe(observer);
 
 ### [min](https://rxjs-dev.firebaseapp.com/api/operators/min)
 
-수학 관련 연산자<br />
 숫자(또는 제공된 함수와 비교할 수 있는 항목)를 내보내는 observable에서 작동한다.
 
 complete되면 가장 작은 값을 발행한다.
@@ -85,7 +84,6 @@ observable$.pipe(min()).subscribe(observer);
 
 ### [reduce](https://rxjs-dev.firebaseapp.com/api/operators/reduce)
 
-수학 관련 연산자<br />
 소스 Observable에 누산기 함수를 적용하고 소스가 완료되면 선택적 누적 결과를 반환한다.<br />
 Array.prototype.reduce와 동일
 
@@ -115,9 +113,13 @@ observable$
   .subscribe(observer);
 ```
 
+## 선택 관련 연산자
+
+- first, last, elementAt, distinct, filter, tap
+
 ### [first](https://rxjs-dev.firebaseapp.com/api/operators/first)
 
-선택 관련 연산자<br />
+선택 관련 연산자<br >
 소스 Observable에서 내보낸 첫 번째 값(또는 일부 조건을 충족하는 첫 번째 값)만 내보낸다.
 
 ```ts
@@ -299,7 +301,6 @@ complete
 
 ## [tap](https://rxjs-dev.firebaseapp.com/api/operators/tap)
 
-선택 관련 연산자<br />
 통과되는 모든 값마다 특정 작업을 수행한다.<br />
 **발행 결과에 영향을 주지 않는다.**
 
