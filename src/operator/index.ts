@@ -23,4 +23,17 @@
 
 // transformation
 // import "./map.ts";
-import "./pluck.ts";
+// import "./pluck.ts";
+// import "./to-array.ts";
+// import "./scan.ts";
+// import "./zip.ts";
+
+// take, skip
+// import "./take.ts";
+// import "./take-last.ts";
+// import "./take-while.ts";
+// import "./take-until.ts";
+// import "./skip.ts";
+// import "./skip-last.ts";
+// import "./skip-while.ts";
+import "./skip-until.ts";
